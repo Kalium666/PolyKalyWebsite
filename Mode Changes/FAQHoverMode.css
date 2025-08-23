@@ -1,0 +1,60 @@
+body {
+    background: #000;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 2rem;
+  }
+  
+  .faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .faq-header h1 {
+    font-size: 2rem;
+    color: greenyellow;
+  }
+  
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-question {
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #fff;
+  }
+  
+  .faq-answer {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-left: 1.8rem; /* indent answer so arrow stays aligned */
+    margin-top: 0.4rem;
+    color: #b0bec5;
+  
+    /* initially hidden */
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+  
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease;
+  }
+  
+  .faq-item:click .faq-answer {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition-delay: 0s;
+  }
+  
