@@ -235,7 +235,16 @@
   </div>
 </div>
 
-
+  <script>
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    if (isMobile) {
+      const warning = document.getElementById('mobileWarning');
+      warning.style.display = 'flex';
+      document.getElementById('closeWarning').addEventListener('click', () => {
+        warning.style.display = 'none';
+      });
+    }
+  </script>
     
   </body>
 </html>
