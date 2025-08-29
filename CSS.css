@@ -521,7 +521,7 @@ padding: 0%;
 }
 
 .mobile-warning-content {
-  background: white;
+  background: black;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -533,7 +533,7 @@ padding: 0%;
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: black;
   color: white;
   cursor: pointer;
 }
