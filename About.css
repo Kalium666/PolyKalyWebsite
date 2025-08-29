@@ -1,0 +1,220 @@
+.centerFix {
+    text-align: center;
+  }
+  
+  /* From Uiverse.io by kennyotsu */
+  .card {
+    --bg-color: #000;
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+  }
+  
+  .loader {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    border-radius: 8px;
+  }
+  
+  .words {
+    overflow: hidden;
+    position: relative;
+  }
+  .words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    );
+    z-index: 20;
+  }
+  .word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    color: yellowgreen;
+    animation: spin_4991 8s infinite;
+  }
+  @keyframes spin_4991 {
+    10% { transform: translateY(-102%); }
+    25% { transform: translateY(-100%); }
+    35% { transform: translateY(-202%); }
+    50% { transform: translateY(-200%); }
+    60% { transform: translateY(-302%); }
+    75% { transform: translateY(-300%); }
+    85% { transform: translateY(-402%); }
+    100% { transform: translateY(-400%); }
+  }
+  
+  /* === ABOUT PAGE STYLES === */
+  
+  /* Hero Section */
+  .about-hero {
+    text-align: center;
+    padding: 0.5rem 2rem 1rem;
+    font-size: smaller;
+  }
+  .about-hero p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Sections */
+  .about-section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+    color: yellowgreen;
+    margin-bottom: 1rem;
+  }
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+  }
+  
+  /* Core Values */
+  .values ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .values li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .values li:hover {
+    background: yellowgreen;
+    color: #000;
+    transform: translateY(-5px);
+  }
+  
+  /* Impact Stats */
+  .impact-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  .impact-stats .stat {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .impact-stats .stat:hover {
+    background: yellowgreen;
+    color: #000;
+    transform: scale(1.05);
+  }
+  
+  /* Call To Action */
+  .cta {
+    text-align: center;
+    margin: 2rem 0; /* reduced */
+    margin-bottom: 0rem !important;
+  }
+  .cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+    color: #e0e0e0;
+  }
+  
+  /* Social Media Grid */
+  .social-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto; /* reduced */
+    max-width: 500px;
+    padding: 1rem;
+  }
+  .social-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+    overflow: hidden;
+  }
+  .social-card .icon {
+    font-size: 2.5rem;
+    color: yellowgreen;
+    margin-bottom: 0.5rem;
+  }
+  .social-card .label {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    margin-top: 0.5rem;
+  }
+  .social-card:hover {
+    transform: translateY(-8px);
+    background: yellowgreen;
+  }
+  .social-card:hover .icon,
+  .social-card:hover .label {
+    color: #000;
+  }
+  .social-card .overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .social-card:hover .overlay {
+    opacity: 1;
+  }
+  @media (max-width: 600px) {
+    .social-card-grid {
+      grid-template-columns: 1fr;
+      max-width: 300px;
+    }
+  }
+  
+
+  .paddingQuickFix{
+    padding-bottom: 0;
+  }

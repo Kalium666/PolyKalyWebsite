@@ -1,0 +1,74 @@
+
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-header h1 {
+  font-size: 2rem;
+  color: greenyellow;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* === FAQ ITEM === */
+.faq-item {
+  margin-bottom: 1.5rem;
+}
+
+/* === QUESTION === */
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+
+  /* Smooth hover + movement */
+  transition: color 0.3s ease, 
+              text-shadow 0.3s ease, 
+              transform 0.3s ease;
+}
+
+.faq-question:hover {
+  color: greenyellow;
+  text-shadow: 0 0 6px rgba(47, 133, 90, 0.6);
+}
+
+/* Shift forward when active */
+.faq-item.active .faq-question {
+  transform: translateX(10px);
+}
+
+/* === ANSWER === */
+.faq-answer {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-left: 1.8rem;
+  color: #b0bec5;
+
+  max-height: 0;      /* Hidden by default */
+  opacity: 0;         /* Fully transparent */
+  overflow: hidden;   /* Prevents content leak */
+  margin-top: 0.5rem; /* Natural spacing between Q & A */
+
+  transition: max-height 0.4s ease-in-out, 
+              opacity 0.4s ease-in-out;
+}
+
+/* Visible state */
+.faq-item.active .faq-answer {
+  max-height: 400px;  /* Large enough for long answers */
+  opacity: 1;
+}
+
+
+#smallFix{
+  padding-top: 0.5rem;
+}

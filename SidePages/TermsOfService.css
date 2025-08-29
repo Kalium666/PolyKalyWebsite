@@ -1,0 +1,39 @@
+/* Terms Page Styles */
+.terms-container {
+    max-width: 800px;
+
+    padding: 0 2rem;
+    color: #e0e0e0;
+    line-height: 1.8;
+  }
+  
+  .terms-container h1 {
+    font-size: 2.2rem;
+    color: yellowgreen;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .terms-container .last-updated {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 2rem;
+  }
+  
+  .terms-container h2 {
+    font-size: 1.4rem;
+    color: yellowgreen;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .terms-container p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .terms-container a {
+    color: yellowgreen;
+    text-decoration: underline;
+  }
+  
