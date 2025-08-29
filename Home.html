@@ -226,5 +226,26 @@
         </div>
       </footer>
     </div>
+
+<div id="mobile-popup">
+  <div class="mobile-popup-box">
+    <p>⚠️ This site is best viewed on desktop for the full experience.</p>
+    <button id="close-popup">OK</button>
+  </div>
+</div>
+
+<!-- JS script -->
+<script>
+  // Show popup if screen width < 768px (mobile breakpoint)
+  if (window.innerWidth < 768) {
+    document.getElementById("mobile-popup").style.display = "flex";
+  }
+
+  // Close popup when user clicks OK
+  document.getElementById("close-popup").addEventListener("click", () => {
+    document.getElementById("mobile-popup").style.display = "none";
+  });
+</script>
+    
   </body>
 </html>
